@@ -11,15 +11,16 @@
 
   position: relative;
 }
+.wrap .content .main-tit {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
 .wrap .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 20em;
   font-weight: bold;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 }
 /* 커서포인트 */
 .pointer {
@@ -89,6 +90,7 @@
   max-height: 100%;
   height: 100%;
   border-radius: 50px;
+  background: #454545;
 }
 ::-webkit-scrollbar-thumb {
   background: #000;
@@ -136,9 +138,18 @@ li {
   margin-left: -3px;
   background-color: #fff;
   border-radius: 100%;
-  -webkit-animation: sdb10 2s infinite;
-  animation: sdb10 2s infinite;
+  -webkit-animation: sdb10 1s infinite;
+  animation: sdb10 1s infinite;
   box-sizing: border-box;
+}
+/* keyframes */
+@-webkit-keyframes sdb10 {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: 30px;
+  }
 }
 /*  home 부분 */
 .wrap .home {
@@ -191,14 +202,42 @@ li {
   text-align: center;
   font-style: italic;
 }
-.wrap .home .text-area .main-tit h1 {
-  font-size: 80px;
-}
 .wrap .home .text-area .sub-tit .sub1 {
-  margin-bottom: 50px;
-  font-size: 38px;
+  font-size: 50px;
+  min-width: 11px;
+  white-space: nowrap;
+  margin: 0;
+  position: fixed;
+  color: transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.wrap .home .text-area .sub-tit .sub2 {
+.sub1::before {
+  content: "Web Designer Portfolio JongWon . Choi";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-right: 1px solid black;
+  overflow: hidden;
+  animation: typing 5s steps(31) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.wrap .home .text-area .main-tit h1 {
   font-size: 80px;
 }
 /* 텍스트버블효과  js연동 */
@@ -232,7 +271,7 @@ li {
 .about .text-area .main-tit {
   z-index: 1;
   position: absolute;
-  right: 38%;
+  right: 40%;
   top: 100px;
   text-align: center;
 }
@@ -292,7 +331,8 @@ li {
   font-family: "Noto Sans KR";
   font-weight: 500;
 }
-.pf-list img {
+/* 포폴리스트 이미지 호버시 확대 */
+.pf-list .img-area img {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -304,20 +344,119 @@ li {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.pf-list:hover img {
+.pf-list .img-area:hover img {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
-/* 사이드메뉴  */
-/* .scroll-wrap .scroll {
+/* contact 시작 */
+.wrap .contact {
+  position: relative;
+}
+.contact .img-box .main-img {
+  z-index: 1;
   width: 100%;
+  height: 100%;
 }
-.scroll-wrap .sc-gnb a:hover {
+.contact .text-area .main-tit {
+  z-index: 1;
+  position: absolute;
+  right: 36%;
+  top: 100px;
+  text-align: center;
+}
+.wrap .contact .text-area .main-tit h1 {
+  font-size: 80px;
+}
+.wrap .contact .img-box {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.wrap .contact .text-area .sub-tit {
+  position: absolute;
+  bottom: 10px;
+  left: 42%;
+  margin-bottom: 50px;
+}
+.wrap .contact .text-area .sub-tit .mainsub_tit {
+  position: absolute;
+  bottom: 50px;
+  left: 20%;
+  text-align: center;
+}
+.wrap .contact .text-area .sub-tit span {
+  text-align: center;
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Noto Sans KR";
+}
+/* 모달 */
+.modal {
+  position: fixed;
+  top: 2000px;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  z-index: 99;
+  left: 20%;
+}
+.close {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  color: #fff;
   font-size: 22px;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.scroll-wrap .sc-gnb .effect-shine {
-  text-transform: uppercase;
-} */
+.modal .modal-body .modal_content {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  border-radius: 10px;
+
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.close:hover,
+.close:focus {
+  z-index: 999;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal_body .modal_txt {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.modal .modal_body .site-move-btn {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #000;
+  border: 1px solid #bbb;
+
+  margin-right: 20px;
+  padding: 5px 10px 5px 10px;
+  opacity: 0.7;
+}
+.modal .modal_body .site-move-btn:hover {
+  color: #000;
+  background-color: #bbb;
+  transition: 1s;
+  opacity: 1;
+}

@@ -64,5 +64,9 @@ $(document).ready(function() {
     
         });
     }
+    $(document).on("click","img",function(){
+        var path = $(this).attr('src')
+        showImage(path);
+    });//end click event
 });
 
