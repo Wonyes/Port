@@ -11,8 +11,13 @@
 
   position: relative;
 }
+.wrap .img-box {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
 .wrap .content .main-tit {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 0.5px 1px rgba(0, 0, 0, 0.3);
 }
 .wrap .content {
   position: absolute;
@@ -108,8 +113,8 @@ li {
 /* 스크롤 애니메이션 */
 .scroll-bar a {
   position: absolute;
-  bottom: 0;
-  right: 6.5%;
+  bottom: 20px;
+  right: 45%;
   z-index: 9;
   display: inline-block;
   transition: opacity 0.3s;
@@ -187,13 +192,14 @@ li {
   font-size: 22px;
 }
 /* home 메인 / 서브 텍스트 */
+.wrap .home .text-area .main-tit h1 {
+  font-size: 80px;
+}
 .wrap .home .text-area {
   position: absolute;
-  left: 52%;
-  top: 350px;
-  text-align: center;
+  left: 51%;
+  top: 270px;
   transform: translate(-50%, -50%);
-  display: block;
 }
 .wrap .home .text-area .sub-tit {
   margin-top: 200px;
@@ -203,7 +209,7 @@ li {
   font-style: italic;
 }
 .wrap .home .text-area .sub-tit .sub1 {
-  font-size: 50px;
+  font-size: 40px;
   min-width: 11px;
   white-space: nowrap;
   margin: 0;
@@ -214,16 +220,27 @@ li {
   transform: translate(-50%, -50%);
 }
 .sub1::before {
-  content: "Web Designer Portfolio JongWon . Choi";
+  content: "Web Designer Portfolio";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 2px;
   width: 100%;
   height: 100%;
   color: #fff;
   border-right: 1px solid black;
   overflow: hidden;
-  animation: typing 5s steps(31) infinite;
+  animation: typing 10s steps(31) infinite;
+}
+.wrap .home .text-area p {
+  position: absolute;
+  left: -165px;
+  top: 330px;
+  font-size: 100px;
+  width: 100%;
+  white-space: nowrap;
+
+  font-weight: lighter;
+  font-style: italic;
 }
 
 @keyframes typing {
@@ -237,9 +254,6 @@ li {
     width: 0%;
   }
 }
-.wrap .home .text-area .main-tit h1 {
-  font-size: 80px;
-}
 /* 텍스트버블효과  js연동 */
 .individual-bubble {
   position: absolute;
@@ -248,52 +262,86 @@ li {
   background-color: #fff;
   z-index: 1;
 }
-/* SCROLL */
-.scroll-wrap {
-  position: fixed;
-  top: 40%;
-  right: 5%;
-  z-index: 9999;
-}
-.scroll-wrap .scroll .sc-gnb li {
-  padding-bottom: 35px;
-}
 /* 어바웃 시작 */
 .wrap .about {
   position: relative;
 }
-.about .img-box .main-img {
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-/* 어바웃 text 시작 */
 .about .text-area .main-tit {
   z-index: 1;
   position: absolute;
   right: 40%;
-  top: 100px;
-  text-align: center;
+  top: 80px;
 }
 .about .text-area .main-tit h1 {
   font-size: 80px;
 }
+.about .content {
+  margin-left: 50px;
+}
+.about .content .main-img {
+  position: absolute;
+  top: 230px;
+}
+.about .info .info-tit {
+  display: flex;
+  font-weight: 500;
+}
+.about .info .info-tit {
+  position: absolute;
+  top: -77px;
+
+  font-size: 24px;
+  white-space: nowrap;
+  color: transparent;
+}
+.info-tit::before {
+  content: "“전역하고 나는 무슨일을 해야할까?”";
+  position: absolute;
+  min-width: 11px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color: #bbb;
+  border-right: 1px solid #fff;
+  overflow: hidden;
+  animation: typing 10s steps(50);
+}
+.about .info {
+  top: 300px;
+  left: 450px;
+  position: absolute;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+.about .info .info-sub {
+}
+.about .info span {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+/* work시작 */
 .wrap .work {
   position: relative;
 }
-.wrap .work .img-box {
+.blind {
   position: absolute;
   top: 0;
-  z-index: -1;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 .work .text-area {
   height: 250px;
   width: 100%;
 }
 .work .text-area .main-tit {
-  z-index: 1;
   position: absolute;
-  right: 40%;
+  left: 43%;
   top: 100px;
   text-align: center;
 }
@@ -351,29 +399,24 @@ li {
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
+.pf-box .img-area {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 /* contact 시작 */
 .wrap .contact {
   position: relative;
 }
-.contact .img-box .main-img {
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
 .contact .text-area .main-tit {
   z-index: 1;
   position: absolute;
-  right: 36%;
+  left: 38%;
   top: 100px;
   text-align: center;
 }
 .wrap .contact .text-area .main-tit h1 {
   font-size: 80px;
-}
-.wrap .contact .img-box {
-  position: absolute;
-  top: 0;
-  z-index: -1;
 }
 .wrap .contact .text-area .sub-tit {
   position: absolute;
@@ -381,7 +424,7 @@ li {
   left: 42%;
   margin-bottom: 50px;
 }
-.wrap .contact .text-area .sub-tit .mainsub_tit {
+.wrap .contact .text-area .sub-tit .info_tit {
   position: absolute;
   bottom: 50px;
   left: 20%;
@@ -397,25 +440,35 @@ li {
 /* 모달 */
 .modal {
   position: fixed;
-  top: 2000px;
+  top: 1873px;
   background-color: rgba(0, 0, 0, 0.3);
-  align-items: center;
-  z-index: 99;
-  left: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 .close {
   position: absolute;
-  top: -50px;
-  right: 0px;
+  top: 90px;
+  right: 410px;
   color: #fff;
   font-size: 22px;
   font-weight: bold;
   transition: 0.3s;
 }
+.modal .modal_body {
+  z-index: 999;
+  position: absolute;
+
+  justify-content: center;
+  align-items: center;
+  transform: translate(40%, 20%);
+}
 .modal .modal-body .modal_content {
   width: 100%;
   height: 100%;
   display: block;
+  box-shadow: -3px 0px 20px 3px rgba(255, 255, 255, 0.5);
 
   border-radius: 10px;
 
@@ -437,6 +490,9 @@ li {
   text-decoration: none;
   cursor: pointer;
 }
+.modal .modal_body .modal_content {
+  box-shadow: -3px 0px 20px 3px rgba(255, 255, 255, 0.5);
+}
 .modal .modal_body .modal_txt {
   font-family: "Noto Sans KR";
   font-size: 14px;
@@ -456,7 +512,33 @@ li {
 }
 .modal .modal_body .site-move-btn:hover {
   color: #000;
-  background-color: #bbb;
+  background-color: #fff;
   transition: 1s;
   opacity: 1;
+}
+/* SCROLL */
+.scroll-wrap {
+  position: fixed;
+  top: 39%;
+  right: 2%;
+  z-index: 999;
+}
+.scroll-wrap .scroll .sc-gnb li {
+  padding-bottom: 35px;
+}
+.scroll .sc-gnb::before,
+.scroll .sc-gnb::after {
+  content: "";
+  position: fixed;
+  border: 1px solid #fff;
+  height: 100%;
+  right: 7.4%;
+  z-index: 999;
+}
+.scroll .sc-gnb::before {
+  padding-top: 400px;
+  top: -1000px;
+}
+.scroll .sc-gnb::after {
+  padding-bottom: 300px;
 }
