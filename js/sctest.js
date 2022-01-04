@@ -14,8 +14,8 @@ $(document).ready(function() {
         $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
          
         $('.individual-bubble').animate({
-            'bottom': '100%',
-            'opacity' : '-=0.7'
+            'bottom': '80%',
+            'opacity' : '-=0.5'
         }, 3000, function(){
             $(this).remove()
         }
@@ -51,19 +51,19 @@ $(document).ready(function() {
         $html.animate({scrollTop : posTop});
     });
 // 영역 바뀔 시 글자 호버상태 유지
-    function onScroll(event){
-        var scrollPos = $(document).scrollTop();
+    // function onScroll(event){
+    //     var scrollPos = $(document).scrollTop();
 
-        $('.scroll ul li a[href^="#"]').each(function () {
-          var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-              $('.scroll ul li a').parents('li').removeClass("active");
-              currLink.parents('li').addClass("active");
-          }
+    //     $('.scroll ul li a[href^="#"]').each(function () {
+    //       var currLink = $(this);
+    //       var refElement = $(currLink.attr("href"));
+    //       if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+    //           $('.scroll ul li a').parents('li').removeClass("active");
+    //           currLink.parents('li').addClass("active");
+    //       }
     
-        });
-    }
+    //     });
+    // }
     $(document).on("click","img",function(){
         var path = $(this).attr('src')
         showImage(path);
@@ -89,8 +89,40 @@ $(document).ready(function() {
         } else {
           $(".modal").hide();
         }
-      });
-    //   스크롤 사이드 gnb 
-    
-});
+    });
+    //  gnb메뉴 액티브 효과
+    var pager = $(".scroll .sc-gnb li");
+    var contents = $(".container");
 
+    $(window).scroll(function(){
+        var sct = $(window).scrollTop();
+        contents.each(function(){
+            var tg = $(this);
+            var i = tg.index();
+
+            if(tg.offset().top <= sct) {
+                pager.removeClass('active');
+                pager.eq(i).addClass('active');
+            }
+        })
+
+    })
+})
+function rain(){
+    let amount = 20;
+    let body = document.querySelector('.main');
+    let i = 0
+    while(i < amount){
+        let drop = document.createElement('i');
+        
+        let size = Math.random() * 5;
+        let posX = Math.floor(Math.random() * window.innerWidth);
+
+        
+        drop.style.width = 0.2 + size+'px';
+        drop.style.left = PosX + 'px';
+        body.appendChild(drop);
+        i++
+    } 
+    
+}

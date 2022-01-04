@@ -23,7 +23,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div id="full-sections" data-full="true" data-page="home" class="wrap scroll-container">
+    <div id="full-sections" class="wrap scroll-container">
       <div class="content">
         <div id="home" class="home container">
           <div class="menu">
@@ -34,40 +34,43 @@
               <li><a href="#contact">CONTACT</a></li>
             </ul>
           </div>
-          <div class="text-area">
-            <div class="main-tit">
-              <h1>H O M E</h1>
-            </div>
-            <div class="sub-tit">
-              <span class="sub1 bubbles">Web Designer Portfolio</span>
-            </div>
-            <p class="bubbles">Jong Won, Choi</p>
+          <div class="drop bubbles">
+            <ion-icon name="logo-tux"></ion-icon>
           </div>
-          <div class="img-box">
-            <div class="main-img">
-              <img src="./image/home-img.jpg" alt="1" />
-            </div>
+          <div class="text-area">
+            <span class="main_info bubbles">Web Designer Portfolio</span>
+            <p class="maininfo_sub">Jong Won, Choi</p>
           </div>
         </div>
         <div id="about" class="about container">
-          <div class="text-area">
-            <div class="main-tit">
-              <h1>A B O U T</h1>
-            </div>
+          <!-- <div class="drops1">
+            <div class="drop1 bubbles"></div>
+            <div class="drop1 bubbles"></div>
+            <div class="drop1 bubbles"></div>
           </div>
-          <div class="content">
-            <img class="main-img" src="./image/info-myimg.jpg" alt="myimg" />
-          </div>
-          <div id="info" class="info">
-            <span class="info-tit">“전역하고 나는 무슨일을 해야할까?”</span>
-            <span class="info-sub">한번 해볼까? 라는 마음으로 도전해보았습니다.</span>
-            <span class="info-sub">처음 시작은 웹디자이너, 홈페이지 디자인 같이 디자인만 하고싶었습니다. </span>
-            <span class="info-sub"> HTML, CSS, jQuery 를 배우기 시작할때에도 이걸 왜 해야하나 싶었지만, </span>
-            <span class="info-sub"> 코드를 검색해 발견해서 나의 프로젝트의 적용을 성공했을때의 행복을 느껴 퍼블리셔라는 직업을 선택하게 되었습니다. </span>
-          </div>
-          <div class="img-box">
-            <div class="main-img">
-              <img src="./image/about-img.jpg" alt="about-img" />
+          <div class="drops2">
+            <div class="drop2 bubbles"></div>
+            <div class="drop2 bubbles"></div>
+            <div class="drop2 bubbles"></div>
+          </div> -->
+          <div class="card">
+            <div class="content">
+              <div class="imgBx">
+                <img src="./image/info-myimg.jpg" alt="myimg" />
+              </div>
+              <div class="details">
+                <div>
+                  <h3>Hello I'm info card</h3>
+                </div>
+                <div>
+                  <ion-icon name="call-outline"></ion-icon>
+                  <span>+82 6668 3747</span>
+                </div>
+                <div>
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <span>dnjsl216@naver.com</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,21 +156,21 @@
       <div class="pointer pointer8" style="left: 1382px; top: 0px"></div>
       <div class="pointer pointer9" style="left: 1382px; top: 0px"></div>
     </div>
-    <div class="scroll-wrap">
-      <div class="scroll">
-        <ul class="sc-gnb">
-          <li><a data-target="home" href="#home">HOME</a></li>
-          <li><a data-target="about" href="#about">ABOUT</a></li>
-          <li><a data-target="work" href="#work">WORK</a></li>
-          <li><a data-target="contact" href="#contact">CONTACT</a></li>
-        </ul>
-      </div>
+    <div class="scroll">
+      <ul class="sc-gnb">
+        <li class="active"><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </div>
-    <div id="scroll" class="scroll-bar">
+    <div id="scroll-ani" class="scroll-bar">
       <a href="#">
         <span></span>
         Scroll
       </a>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
