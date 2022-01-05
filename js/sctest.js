@@ -25,7 +25,10 @@ $(document).ready(function() {
     $(document).mousemove(function(e){
         $('.pointer').css({left:e.pageX, top:e.pageY});
     })
-// 원페이지 스크롤
+
+    // [TODO] 최종 정리시 코드 정렬~~ 해주시면 좋습니다. 
+    // [TODO] javascript 코딩 컨벤션, html 코딩컨벤션, css 코딩컨벤션 확인해보기~(다른사람들은 어떻게 작업을 하고있는지 어떤 규칙을 가지고 작업을 하고 있는지)
+    // 원페이지 스크롤
     window.addEventListener("wheel", function(e){
         e.preventDefault();
     },{passive : false});
@@ -105,13 +108,12 @@ $(document).ready(function() {
                 pager.eq(i).addClass('active');
             }
         })
-
     })
 })
 function rain(){
     let amount = 20;
     let body = document.querySelector('.main');
-    let i = 0
+    let i = 0;
     while(i < amount){
         let drop = document.createElement('i');
         
@@ -122,7 +124,7 @@ function rain(){
         drop.style.width = 0.2 + size+'px';
         drop.style.left = PosX + 'px';
         body.appendChild(drop);
-        i++
+        i++;
     } 
     
 }

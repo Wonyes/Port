@@ -277,6 +277,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #111;
 }
 
+/* [TODO] reset 중복되는 스타일 , 같은 기능을 하는 스타일 제거 권장  */
 .clearfix::before,
 .clearfix::after {
   content: "";
