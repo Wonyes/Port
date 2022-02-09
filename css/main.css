@@ -1,0 +1,849 @@
+@charset 'UTF-8';
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+i {
+  position: absolute;
+  height: 200px;
+  background: linear-gradient(transparent, #fff);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  animation: animate 5s linear infinite;
+}
+i:nth-child(3n + 1) {
+  background: linear-gradient(transparent, #0ff);
+}
+i:nth-child(3n + 2) {
+  background: linear-gradient(transparent, #0f0);
+}
+i:nth-child(3n + 3) {
+  background: linear-gradient(transparent, #f00);
+}
+@ketframes animate {
+  0% {
+    transform: translateY(-200px);
+  }
+}
+/* wrap 시작 */
+.wrap .content {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+.wrap .img-box {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.wrap .content .main-tit {
+  text-shadow: 1px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+.wrap .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+}
+.wrap .home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e4e4e4;
+}
+.wrap .home .drop {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .home .drop::before {
+  content: "";
+  position: absolute;
+  top: 85px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+.wrap .home .drop::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+.wrap .home .drop ion-icon {
+  font-size: 7em;
+  color: #444;
+}
+.wrap .home .text-area {
+  font-size: 60px;
+  min-width: 11px;
+  white-space: nowrap;
+  margin: 0;
+  position: fixed;
+  color: transparent;
+  top: 700px;
+  left: 30px;
+}
+.wrap .home .text-area .main_info {
+  font-family: "Poppins";
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrap .home .text-area .maininfo_sub {
+  color: #454545;
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.home .main_info::before {
+  content: "Web Designer Portfolio";
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 45px;
+  color: #000;
+  overflow: hidden;
+  animation: typing 10s steps(999) infinite;
+}
+.home .main_info::before {
+  content: "Web Designer Portfolio";
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 45px;
+  color: #000;
+  overflow: hidden;
+  animation: typing 10s steps(999) infinite;
+}
+/* home gnb 메뉴 */
+.wrap .home .menu {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+}
+.wrap .home .gnb {
+  display: flex;
+  z-index: 1;
+  margin-top: 70px;
+
+  width: 130px;
+  height: 30px;
+}
+.wrap .home .gnb li {
+  width: 50px;
+  height: 30px;
+  margin-left: 65px;
+}
+.wrap .home .gnb a:after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.wrap .home .gnb a:hover:after {
+  transform: scaleX(1);
+}
+.wrap .home .gnb a:after {
+  transform-origin: 0% 50%;
+}
+.wrap .home .gnb a:hover {
+  font-size: 22px;
+}
+/*  about 부분 */
+.wrap .about {
+  position: relative;
+}
+.wrap .container {
+  width: 1920px;
+  height: 100vh;
+}
+.wrap .about .text-area .main-tit h1 {
+  font-size: 80px;
+}
+.wrap .about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../image/about-img.jpg);
+}
+.about::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: #ddd;
+
+  position: absolute;
+  opacity: 0.2;
+}
+.about .card {
+  position: relative;
+  width: 1400px;
+  height: 700px;
+  left: -80px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  display: flex;
+}
+.about .card:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+.about .card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ddd;
+}
+.about .card .content {
+  position: relative;
+  display: flex;
+
+  margin-top: -80px;
+  gap: 20px;
+  height: 300px;
+}
+.about .card .content .imgBx {
+  position: relative;
+  overflow: hidden;
+  margin-left: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.about .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.about .card .content .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000;
+}
+.about .card .content .info ion-icon {
+  color: #000;
+}
+.about .card .content .info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about .card .content .info h3 {
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #000;
+  font-size: 22px;
+}
+.about .card .content .info span {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: #000;
+}
+/* 텍스트버블효과  js연동 */
+.individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+/* 어바웃 시작 */
+/* .wrap .about {
+  position: relative;
+}
+.about .text-area .main-tit {
+  z-index: 1;
+  position: absolute;
+  right: 40%;
+  top: 80px;
+}
+.about .text-area .main-tit h1 {
+  font-size: 80px;
+}
+.about .content {
+  margin-left: 50px;
+}
+.about .content .main-img {
+  position: absolute;
+  top: 230px;
+}
+.about .info .info-tit {
+  display: flex;
+  font-weight: 500;
+}
+.about .info .info-tit {
+  position: absolute;
+  top: -77px;
+
+  font-size: 24px;
+  white-space: nowrap;
+  color: transparent;
+}
+.info-tit::before {
+  content: "“나는 무슨일을 해야할까?”";
+  position: absolute;
+  font-size: 24px;
+  font-family: "Poppins";
+  min-width: 11px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-right: 1px solid #fff;
+  overflow: hidden;
+  animation: typing 10s steps(50);
+}
+.about .info {
+  top: 300px;
+  left: 450px;
+  position: absolute;
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+}
+.about .info .info-tit2 {
+  padding-top: 130px;
+  font-size: 32px;
+  font-weight: 400;
+}
+.about .info span {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 10px;
+} */
+/* work시작 */
+.wrap .work {
+  position: relative;
+  background: #eee;
+}
+.work .drops1 .drop1 {
+  position: absolute;
+  left: 300px;
+  top: 610px;
+  right: 300px;
+  width: 250px;
+  height: 250px;
+  background: transparent;
+  border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+.drop1::before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 35px;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+}
+.drop1::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 65px;
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+.drop1:nth-child(2) {
+  transform: scale(0.5) translate(-120px, 200px);
+  border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+}
+.drop1:nth-child(2) {
+  transform: scale(0.5) translate(-220px, -260px);
+  border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+}
+.drop1:nth-child(3) {
+  transform: scale(0.5) translate(400px, 180px);
+  border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+}
+.work .drops2 .drop2 {
+  position: absolute;
+  right: 300px;
+  top: 200px;
+  width: 250px;
+  height: 250px;
+  background: transparent;
+  border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+.drop2::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 35px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+}
+.drop2::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 85px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+.drop2:nth-child(2) {
+  transform: scale(0.5) translate(-300px, 300px);
+  border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+}
+.drop2:nth-child(3) {
+  transform: scale(0.5) translate(280px, 10px);
+  border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+}
+.drop2:nth-child(3) {
+  transform: scale(0.5) translate(120px, -350px);
+  border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+}
+.work .text-area {
+  height: 250px;
+  width: 100%;
+}
+.work .text-area .main-tit {
+  position: absolute;
+  left: 43%;
+  top: 100px;
+  text-align: center;
+}
+.work .text-area .main-tit h1 {
+  font-size: 80px;
+}
+.work .pf-imgarea {
+  width: 100%;
+  margin-left: 50px;
+}
+.work .txt-area {
+  margin-bottom: 20px;
+}
+.work .pf-list {
+  display: inline-block;
+  margin-right: 80px;
+}
+.work .pf-list .pf-box {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.work .pf-box span {
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: -10px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.work .pf-box span::before {
+  content: "Click me!";
+  font-family: "Poppins";
+  font-size: 14px;
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background: #ddd;
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 300;
+  color: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.work .pf-box span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background: #ddd;
+  z-index: -1;
+  box-shadow: 140px - 140px #ddd;
+}
+.work .pf-list .txt-area {
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+}
+.work .pf-list .txt-area .wk-text1 {
+  font-family: "Poppins";
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000;
+}
+.work .pf-list .txt-area .wk-text2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000;
+}
+/* 포폴리스트 이미지 호버시 확대 */
+.pf-list .img-area img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.pf-list .img-area:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.pf-box .img-area {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+/* contact 시작 */
+.wrap .contact {
+  position: relative;
+}
+.contact .text-area .main-tit {
+  z-index: 1;
+  position: absolute;
+  left: 38%;
+  top: 100px;
+  text-align: center;
+}
+.wrap .contact .text-area .main-tit h1 {
+  font-size: 80px;
+}
+.wrap .contact .text-area .sub-tit {
+  position: absolute;
+  bottom: 10px;
+  left: 41%;
+  margin-bottom: 50px;
+}
+.wrap .contact .text-area .sub-tit .info_tit {
+  position: absolute;
+  bottom: 50px;
+  left: 20%;
+  text-align: center;
+}
+.wrap .contact .text-area .sub-tit span {
+  text-align: center;
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Noto Sans KR";
+}
+/* 모달 */
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.close {
+  position: absolute;
+  top: 90px;
+  right: 410px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.modal .modal_body {
+  position: absolute;
+
+  justify-content: center;
+  align-items: center;
+  transform: translate(40%, 20%);
+}
+.modal .modal-body .modal_content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-shadow: -3px 0px 20px 3px rgba(255, 255, 255, 0.5);
+
+  border-radius: 10px;
+
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+.close:hover,
+.close:focus {
+  z-index: 999;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal_body .modal_content {
+  box-shadow: -3px 0px 20px 3px rgba(255, 255, 255, 0.5);
+}
+.modal .modal_body .modal_txt {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  padding-bottom: 5px;
+}
+.modal .modal_body .site-move-btn {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #000;
+  border: 1px solid #bbb;
+
+  margin-right: 20px;
+  padding: 5px 10px 5px 10px;
+  opacity: 0.7;
+}
+.modal .modal_body .site-move-btn:hover {
+  color: #000;
+  background-color: #fff;
+  transition: 1s;
+  opacity: 1;
+}
+/* SCROLL */
+.scroll {
+  position: fixed;
+  top: 39%;
+  right: 0.5%;
+  z-index: 999;
+}
+.scroll .sc-gnb li {
+  padding-bottom: 35px;
+  width: 130px;
+  height: 60px;
+}
+.scroll .sc-gnb::before,
+.scroll .sc-gnb::after {
+  content: "";
+  position: fixed;
+  border: 1px solid #bbb;
+  height: 100%;
+  right: 7.4%;
+  z-index: 999;
+}
+.scroll .sc-gnb::before {
+  padding-top: 400px;
+  top: -1000px;
+}
+.scroll .sc-gnb::after {
+  padding-bottom: 300px;
+}
+.scroll .sc-gnb a {
+  color: #bbb;
+}
+.scroll .sc-gnb .active a {
+  font-size: 24px;
+  color: #000;
+}
+/* 키프레임 */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+/* 커서포인트 */
+.pointer {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #9a9a9a;
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+.pointer1 {
+  transition: 0.05s;
+  opacity: 0.9;
+}
+.pointer2 {
+  transition: 0.06s;
+  opacity: 0.7;
+}
+.pointer3 {
+  transition: 0.08s;
+  opacity: 0.6;
+}
+.pointer4 {
+  transition: 0.09s;
+  opacity: 0.5;
+}
+.pointer5 {
+  width: 9px;
+  height: 9px;
+  opacity: 0.4;
+  transition: 0.1s;
+}
+.pointer6 {
+  width: 9px;
+  height: 9px;
+  opacity: 0.3;
+  transition: 0.11s;
+}
+.pointer7 {
+  width: 8px;
+  height: 8px;
+  opacity: 0.2;
+  transition: 0.12s;
+}
+.pointer8 {
+  width: 7px;
+  height: 7px;
+  opacity: 0.1;
+  transition: 0.13s;
+}
+.pointer9 {
+  width: 6px;
+  height: 6px;
+  opacity: 0.1;
+  transition: 0.14s;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: #454545;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* 스크롤 애니메이션 */
+.scroll-bar a {
+  position: absolute;
+  bottom: 20px;
+  right: 47.4%;
+  z-index: 9;
+  display: inline-block;
+  transition: opacity 0.3s;
+  padding-top: 50px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+#scroll-ani a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+#scroll-ani a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 1s infinite;
+  animation: sdb10 1s infinite;
+  box-sizing: border-box;
+}
