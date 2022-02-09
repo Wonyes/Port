@@ -62,6 +62,8 @@ $(document).ready(function() {
 	$(".modal-click").click(function(){
 		$(".modal").show();
 		// 해당 이미지 가겨오기
+        let modal0 = document.getElementById('modal-0')
+        let modal1 = document.getElementById('modal-1')
 		var imgSrc = $(this).children("img").attr("src");
 		var imgAlt = $(this).children("img").attr("alt");
 		$(".modal_content img").attr("src", imgSrc);
@@ -95,22 +97,31 @@ $(document).ready(function() {
             }
         })
     })
-})
-function rain(){
-    let amount = 20;
-    let body = document.querySelector('.main');
-    let i = 0;
-    while(i < amount){
-        let drop = document.createElement('i');
-        
-        let size = Math.random() * 5;
-        let posX = Math.floor(Math.random() * window.innerWidth);
+    let toggle = document.querySelector('.toggle');
+    let menu = document.querySelector('.menu');
+    toggle.onclick = function(){
+        menu.classList.toggle('active')
+    }
+    function bubbles(){
+        let count = 200;
+        let section = document.querySelector('#about');
+        let i = 0;
+        while (i < count){
+          let bubble = document.createElement('i');
+          let x = Math.floor(Math.random() * window.innerWidth);
+          let y = Math.floor(Math.random() * window.innerHeight);
+          let size = Math.random() * 10;
+          bubble.style.left = x+'px';
+          bubble.style.top = y+'px';
+          bubble.style.width = 1+size+'px';
+          bubble.style.height = 1+size+'px';
 
-        
-        drop.style.width = 0.2 + size+'px';
-        drop.style.left = PosX + 'px';
-        body.appendChild(drop);
-        i++;
-    } 
-    
-}
+          bubble.style.animationDuration = 5+size+'s';
+          bubble.style.animationDelay = 5+size+'s';
+
+          section.appendChild(bubble);
+          i++
+        } 
+    }
+    bubbles();
+})
