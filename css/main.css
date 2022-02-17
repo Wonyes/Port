@@ -58,11 +58,6 @@ i:nth-child(3n + 3) {
   min-height: 100vh;
   background: #e4e4e4;
 }
-.wrap .home .txt-area {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
 .wrap .home .drop {
   position: relative;
   height: 300px;
@@ -101,22 +96,20 @@ i:nth-child(3n + 3) {
   color: #444;
 }
 .wrap .home .text-area {
-  font-size: 30px;
-  min-width: 11px;
   white-space: nowrap;
   margin: 0;
   position: fixed;
   color: transparent;
-  top: 750px;
+  top: 820px;
   left: 30px;
 }
 .wrap .home .text-area .main_info {
-  font-size: 50px;
+  font-size: 6vh;
   font-weight: 400;
 }
 .wrap .home .text-area .maininfo_sub {
   color: #000;
-  font-size: 30px;
+  font-size: 3vh;
   font-weight: 600;
 }
 .home .main_info::before {
@@ -197,7 +190,7 @@ i:nth-child(3n + 3) {
   position: relative;
 }
 .wrap .container {
-  width: 1920px;
+  width: 100%;
   height: 100vh;
 }
 .wrap .about .text-area .main-tit h1 {
@@ -439,10 +432,10 @@ svg circle:nth-child(2){
   stroke-dashoffset: calc(440px - (440px * 75) / 100);
 }
 .skill-card:nth-child(3) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440px - (440px * 65) / 100);
+  stroke-dashoffset: calc(440px - (440px * 55) / 100);
 }
 .skill-card:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440px - (440px * 70) / 100);
+  stroke-dashoffset: calc(440px - (440px * 60) / 100);
 } 
 /* 텍스트버블효과  js연동 */
 .individual-bubble {
@@ -864,7 +857,7 @@ svg circle:nth-child(2){
 .close:hover,
 .close:focus {
   z-index: 999;
-  color: #bbb;
+  color: #191919;
   text-decoration: none;
   cursor: pointer;
 }
@@ -878,9 +871,12 @@ svg circle:nth-child(2){
   color: #000;
   padding-bottom: 5px;
 }
+.modal .modal_body .txt1 {
+  padding-top: 10px;
+}
 .modal .modal_body .site-move-btn {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 600;
   background-color: #000;
   border: 1px solid #bbb;
 
@@ -890,7 +886,7 @@ svg circle:nth-child(2){
 }
 .modal .modal_body .site-move-btn:hover {
   color: #000;
-  background-color: #fff;
+  background-color: #f0f4f0;
   transition: 1s;
   opacity: 1;
 }
@@ -1069,13 +1065,14 @@ svg circle:nth-child(2){
 .scroll-bar a {
   position: absolute;
   bottom: 20px;
-  right: 47.4%;
   z-index: 9;
   display: inline-block;
   transition: opacity 0.3s;
   padding-top: 50px;
-  transform: translate(-50%, -50%);
-  color: #fff;
+  width: 100%;
+  color: #454545;
+  text-align: center;
+  align-items: center;
 }
 #scroll-ani a span {
   position: absolute;
@@ -1083,7 +1080,7 @@ svg circle:nth-child(2){
   left: 50%;
   width: 30px;
   height: 50px;
-  border: 2px solid #fff;
+  border: 2px solid #454545;
   border-radius: 50px;
   box-sizing: border-box;
   transform: translate(-50%, -50%);
@@ -1096,9 +1093,73 @@ svg circle:nth-child(2){
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: #fff;
+  background-color: #454545;
   border-radius: 100%;
   -webkit-animation: sdb10 1s infinite;
   animation: sdb10 1s infinite;
   box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+  .wrap .home .drop {
+  }
+  .wrap .home .text-area {
+    top: 740px;
+    left: 10px;
+  }
+  .wrap .home .text-area .main_info {
+    font-size: 31px;
+  }
+  .about .card {
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+  }
+  .about .card .content {
+    top: 160px;
+  }
+  .about .card .content .info .main_txt {
+    font-size: 14px;
+    margin-left: 18px;
+  }
+  .about .card .content .info li {
+    font-weight: 500;
+  }
+  .scroll { 
+    display: none;
+  }
+  .work .pf-imgarea {
+    margin-left: 40px;
+  }
+  .work .pf-container {
+    display: inline-block;
+  }
+  .work .pf-list {
+    margin-right: 20px;
+  }
+  .work .drops1 .drop1 {
+    width: 200px;
+    height: 200px;
+  }
+  .work .drops2 .drop2 {
+    top: 70px;
+    width: 150px;
+    height: 150px;
+  }
+  .drop2:nth-child(2) {
+    transform: scale(0.5) translate(-220px, 120px);
+  }
+  .drop2:nth-child(3) {
+    transform: scale(0.5) translate(120px, -250px);
+  }
+  .drop2:nth-child(4) {
+    transform: scale(0.5) translate(260px, -20px);
+  }
+  .contact .sub-tit {
+    right: -200px;
+  }
+  .contact .sub-tit li {
+    font-size: 10px;
+  }
+  
 }

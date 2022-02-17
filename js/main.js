@@ -26,9 +26,7 @@ $(document).ready(function() {
         $('.pointer').css({left:e.pageX, top:e.pageY});
     })
 
-    // [TODO] 최종 정리시 코드 정렬~~ 해주시면 좋습니다. 
     // [TODO] javascript 코딩 컨벤션, html 코딩컨벤션, css 코딩컨벤션 확인해보기~(다른사람들은 어떻게 작업을 하고있는지 어떤 규칙을 가지고 작업을 하고 있는지)
-    // 원페이지 스크롤
     window.addEventListener("wheel", function(e){
         e.preventDefault();
     },{passive : false});
@@ -62,8 +60,6 @@ $(document).ready(function() {
 	$(".modal-click").click(function(){
 		$(".modal").show();
 		// 해당 이미지 가겨오기
-        let modal0 = document.getElementById('modal-0')
-        let modal1 = document.getElementById('modal-1')
 		var imgSrc = $(this).children("img").attr("src");
 		var imgAlt = $(this).children("img").attr("alt");
 		$(".modal_content img").attr("src", imgSrc);

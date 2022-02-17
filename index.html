@@ -5,22 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- [TODO] SEO 최적화: 파비콘, 공유섬네일 등등... -->
-    <!-- [TODO] 메인(첫화면) 파일 명은 index로 변경~ -->
-    <!-- [TODO] 파일명.확장자 README.md (마크다운파일) 생성하셔서 프로젝트 관련 사항 적어주시기 -->
-    <!-- [TODO] ".gitignore" 파일 생성하셔서, 무시할파일들 설정해주시면 굿~(지금당장 필요하진 않겠지만, 설정(config...ftp접속정보 등등...)파일이라던지, 디자인파일)->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
 
     <!-스타일 -->
-
-    <!-- [TODO] 프로젝트 완료시 사용하지 않는 css 불필요한 파일은 제거하기 -->
-    <!-- [TODO] 주석같은 경우도 최종 완료시, 공부용으로 남긴주석, 기록용으로 남긴 주석은 지워주시는게 좋습니다. -->
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <!-- 라이브러리 -->
-
-    <!-- [TODO-tip] jQuery 같은 경우는 한번만 불러오시면 됩니다. 버전이 다른것을 여러번 불러드리면 이슈가 생길 가능성이 높습니다.  -->
     <script src="./js/libs/jquery-3.6.0.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,7 +20,6 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <!--[TODO] 코딩컨벤션 확인 -->
     <div id="full-sections" class="wrap scroll-container">
       <div class="content">
         <div id="home" class="home container">
@@ -140,7 +129,7 @@
                     <circle cx="70" cy="70" r="70"></circle>
                   </svg>
                   <div class="number">
-                    <h2>65<span>%</span></h2>
+                    <h2>55<span>%</span></h2>
                   </div>
                 </div>
               </div>
@@ -156,7 +145,7 @@
                     <circle cx="70" cy="70" r="70"></circle>
                   </svg>
                   <div class="number">
-                    <h2>70<span>%</span></h2>
+                    <h2>60<span>%</span></h2>
                   </div>
                 </div>
               </div>
@@ -179,7 +168,8 @@
             <div class="drop2 bubbles"></div>
           </div>
           <div class="pf-imgarea">
-            <div class="pf-list">
+            <div class="pf-container">
+              <div class="pf-list">
               <ul>
                 <li class="txt-area">
                   <a href="#" class="wk-text1">01</a>
@@ -190,12 +180,12 @@
                 <span></span>
                 <ul>
                   <li class="img-area modal-click">
-                    <a href="#work" style="overflow: hidden"><img src="./image/work-closet.jpg" alt="work-closet" /></a>
+                    <a href="#work"><img src="./image/work-closet.jpg" alt="work-closet" /></a>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="pf-list">
+              </div>
+              <div class="pf-list">
               <ul>
                 <li class="txt-area">
                   <a href="#" class="wk-text1">02</a>
@@ -212,8 +202,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="pf-list">
+              </div>
+              <div class="pf-list">
               <ul>
                 <li class="txt-area">
                   <a href="#" class="wk-text1">03</a>
@@ -229,6 +219,25 @@
                     </a>
                   </li>
                 </ul>
+              </div>
+              </div>
+              <div class="pf-list">
+              <ul>
+                <li class="txt-area">
+                  <a href="#" class="wk-text1">03</a>
+                  <a href="#" class="wk-text2">(Coming soon...)</a>
+                </li>
+              </ul>
+              <div class="pf-box">
+                <span></span>
+                <ul>
+                  <li class="img-area">
+                    <a href="#work">
+                      <img src="./image/iuytib_(15).gif" alt="moon" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
               </div>
             </div>
           </div>
@@ -300,10 +309,10 @@
       <button class="close">X</button>
       <div class="modal_body">
         <img class="modal_content" src="./image/필클로그인화면.jpg" alt="popup" />
-        <p class="modal_txt">(Web) fill the Closet (가상의 사이트 구축)</p>
+        <p class="modal_txt txt1">(Web) fill the Closet (가상의 사이트 구축)</p>
         <p class="modal_txt">제작기간 : 2021.10 ~ 2021.12 작업 기여도 :100%</p>
         <p class="modal_txt">작업환경 : Visual Studio Code</p>
-        <p class="modal_txt">제작목표 : 쇼핑몰 시장조사와 트랜드를 익히고 기본쇼핑몰보다는 편집샵,명품계열 쇼핑몰에 목표를 맞추어 제작하였습니다.</p>
+        <p class="modal_txt">제작목표 : 쇼핑몰 시장조사와 트렌드를 익히고 기본쇼핑몰보다는 편집샵,명품계열 쇼핑몰에 목표를 맞추어 제작하였습니다.</p>
         <br />
         <a class="site-move-btn" href="https://mangooo2.github.io/closet/" target="_blank">사이트 이동</a>
       </div>
