@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 * {
   font-family: "Poppins";
@@ -100,12 +100,12 @@ i:nth-child(3n + 3) {
   margin: 0;
   position: fixed;
   color: transparent;
-  top: 820px;
+  bottom: 30px;
   left: 30px;
 }
 .wrap .home .text-area .main_info {
-  font-size: 3.2vw;
-  font-weight: 400;
+  font-size: 2.5vw;
+  font-weight: 300;
 }
 .wrap .home .text-area .maininfo_sub {
   color: #000;
@@ -546,7 +546,7 @@ svg circle:nth-child(2){
 }
 .work .pf-list {
   display: inline-block;
-  margin-right: 80px;
+  margin-right: 100px;
 }
 .work .pf-list .pf-box {
   position: relative;
@@ -598,6 +598,7 @@ svg circle:nth-child(2){
 }
 .work .pf-list .txt-area .wk-text1 {
   margin-bottom: 10px;
+  font-weight: 600;
   font-size: 14px;
   color: #000;
 }
@@ -633,6 +634,7 @@ svg circle:nth-child(2){
 }
 .pf-imgarea .site-move {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .pf-imgarea .site-move-btn {
   font-size: 16px;
@@ -655,10 +657,8 @@ svg circle:nth-child(2){
 .wrap .contact {
   position: relative;
   display: flex;
-  min-height: 100vh;
   padding: 20px;
   background: #e4e4e4;
-  z-index: -1;
   justify-content: center;
   align-items: center;
 }
@@ -729,7 +729,7 @@ svg circle:nth-child(2){
   left: -40%;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.35);
   pointer-events: none;
   transform: skewX(-15deg);
 }
@@ -1104,6 +1104,9 @@ svg circle:nth-child(2){
   box-sizing: border-box;
 }
 @media screen and (max-width:1024px) {
+  .wrap .home .text-area {
+    
+  }
   .wrap .home .text-area .main_info {
     font-size: 5vw;
   }
@@ -1152,9 +1155,9 @@ svg circle:nth-child(2){
   }
   .work .pf-imgarea {
     margin-left: 40px;
+    padding-top: 5px;
   }
   .work .pf-container {
-    display: inline-block;
   }
   .work .pf-list {
     margin-right: 20px;
