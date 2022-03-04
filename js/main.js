@@ -120,4 +120,10 @@ $(document).ready(function() {
         } 
     }
     bubbles();
+
+    const menuToggle = document.querySelector('.menutoggle');
+    const navigation = document.querySelector('.mobilenav');
+    menuToggle.onclick = function(){
+        navigation.classList.toggle('open')
+    }
 })
