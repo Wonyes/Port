@@ -7,7 +7,6 @@
     <!-- [TODO] SEO 최적화: 파비콘, 공유섬네일 등등... -->
 
     <!--스타일 -->
-    <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <!-- 라이브러리 -->
@@ -23,17 +22,6 @@
     <div id="full-sections" class="wrap scroll-container">
       <div class="content">
         <div id="home" class="home container">
-          <div class="mobilenav">
-            <div class="menutoggle"></div>
-            <ul>
-              <li class="list">
-                <a href="#">
-                  <span class="icon"></span>
-                  <span class="text">Home</span>
-                </a>
-              </li>
-            </ul>
-          </div>
           <div class="drop bubbles">
             <div class="menu">  
               <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
@@ -303,7 +291,36 @@
           </ul>
         </div>
       </div>
+      </div>
     </div>
+    <div class="mobilenav">
+      <div class="menutoggle"></div>
+      <ul>
+        <li class="list active" style="--clr:#f44336;">
+          <a href="#home">
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="text">HOME</span>
+          </a>
+        </li>
+        <li class="list" style="--clr:#ffa117;">
+          <a href="#about">
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="text">ABOUT</span>
+          </a>
+        </li>
+        <li class="list" style="--clr:#0fc70f;">
+          <a href="#work">
+            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+            <span class="text">WORK</span>
+          </a>
+        </li>
+        <li class="list" style="--clr:#b145e9;">
+          <a href="#contact">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <span class="text">CONTACT</span>
+          </a>
+        </li>
+      </ul>
     </div>
     <div id="modal-0" class="modal">
       <button class="close">X</button>

@@ -6,29 +6,29 @@ overflow:hidden;
 }
 
 .mobilenav {
+  visibility: hidden;
   position: fixed;
-  width: 75px;
-  inset: 20px 0 20px 20px;
-  background-color: #ccc;
+  width: 100%;
+  background-color:#ccc;
   transition: 0.5s;
+  opacity: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .mobilenav.open {
-  width: 250px;
+  width: 100%;
+  opacity: 1;
 }
 .mobilenav .menutoggle {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 0 23px;
 }
 .mobilenav .menutoggle::before {
@@ -56,6 +56,82 @@ overflow:hidden;
   transform: translateY(8px);
   transition: 0.5s;
   box-shadow: 0 -8px 0 #333;
+}
+.mobilenav ul {
+  display: flex;
+  padding-right: 80px;
+  width: 100%;
+}
+.mobilenav ul li {
+  position: relative;
+  width: 25%;
+  height: 60px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.mobilenav ul li.active {
+  transform: translateY(30px);
+}
+.mobilenav.open ul li.active {
+  transform: translateY(10px);
+}
+.mobilenav ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+.mobilenav ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 55px;
+  height: 55px;
+  transition: 0.5s;
+  line-height: 60px;
+  border-radius: 10px;
+  font-size: 1em;
+  color: #222;
+}
+.mobilenav ul li.active a .icon {
+  color: #fff;
+  background: var(--clr);
+}
+.mobilenav ul li a .icon::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr);
+  filter: blur(7px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.mobilenav ul li.active a .icon::before{
+  opacity: 0.5;
+}
+.mobilenav ul li a .text {
+  position: relative;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.mobilenav.open ul li a .text {
+  opacity: 1;
+  visibility: visible;
+}
+.mobilenav ul li.active a .text {
+  color: var(--clr);
 }
 * {
   font-family: "Poppins";
@@ -1163,6 +1239,9 @@ svg circle:nth-child(2){
 @media screen and (max-width:1024px) {
   .container { 
     max-width: 1024px;
+  }
+  .mobilenav {
+    visibility: visible;
   }
   .wrap .home .text-area .main_info {
     font-size: 5vw;
