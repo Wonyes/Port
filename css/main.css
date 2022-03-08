@@ -1,17 +1,17 @@
 @charset "UTF-8";
+
 html,
 body{
 width:100%;
-overflow:hidden;
+overflow-x:hidden;
 }
 
 .mobilenav {
   visibility: hidden;
   position: fixed;
   width: 100%;
-  background-color:#ccc;
+  background-color:rgba(0, 0, 0, 0.15);
   transition: 0.5s;
-  opacity: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ overflow:hidden;
   transition: 0.5s;
 }
 .mobilenav ul li.active {
-  transform: translateY(30px);
+  transform: translateY(15px);
 }
 .mobilenav.open ul li.active {
   transform: translateY(10px);
@@ -1249,8 +1249,6 @@ svg circle:nth-child(2){
   .wrap .home .text-area .maininfo_sub {
     font-size: 3vw;
   }
-  .about .skill-container {
-  }
   .about .skill-card {
     margin: 20px 10px 60px;
   }
@@ -1274,6 +1272,9 @@ svg circle:nth-child(2){
   }
   .wrap .home .text-area .maininfo_sub {
     font-size: 4vw;
+  }
+  .wrap .about .cardwrap {
+    padding-top: 60px;
   }
   .about .card {
     margin: 10px;
