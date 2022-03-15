@@ -26,7 +26,6 @@ $(document).ready(function() {
         $('.pointer').css({left:e.pageX, top:e.pageY});
     })
 
-    // [TODO] javascript 코딩 컨벤션, html 코딩컨벤션, css 코딩컨벤션 확인해보기~(다른사람들은 어떻게 작업을 하고있는지 어떤 규칙을 가지고 작업을 하고 있는지)
     window.addEventListener("wheel", function(e){
         e.preventDefault();
     },{passive : false});

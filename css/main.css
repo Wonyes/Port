@@ -1236,8 +1236,16 @@ svg circle:nth-child(2){
   box-sizing: border-box;
 }
 @media screen and (max-width:1024px) {
+  body,
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .container { 
     max-width: 1024px;
+  }
+  .about .skill-container {
+    margin-right: 100px;
   }
   .mobilenav {
     visibility: visible;
