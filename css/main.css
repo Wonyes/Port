@@ -1241,9 +1241,6 @@ svg circle:nth-child(2){
     width: 100%;
     overflow-x: hidden;
   }
-  .container { 
-    max-width: 1024px;
-  }
   .about .skill-container {
     margin-right: 100px;
   }
@@ -1308,11 +1305,16 @@ svg circle:nth-child(2){
   .work .drops1 .drop1 {
     width: 200px;
     height: 200px;
+    top: 500px;
+    left: 180px;
   }
   .work .drops2 .drop2 {
-    top: 70px;
+    top: 50px;
     width: 150px;
     height: 150px;
+  }
+  .drop1:nth-child(4) {
+    transform: scale(0.5) translate(300px, 100px);
   }
   .drop2:nth-child(2) {
     transform: scale(0.5) translate(-220px, 120px);
