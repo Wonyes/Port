@@ -1249,6 +1249,12 @@ svg circle:nth-child(2){
     height: 150px;
     width: 150px;
   }
+  .work .pf-list .txt-area .wk-text1 {
+    z-index: 1;
+  }
+  .work .pf-list .txt-area .wk-text2 {
+    z-index: 1;
+  }
   .about .skill-container {
     margin-right: 100px;
   }
@@ -1306,9 +1312,6 @@ svg circle:nth-child(2){
   }
   .work .pf-list {
     margin-right: 20px;
-  }
-  .work .pf-list .txt-area .wk-text2 {
-    z-index: 1;
   }
   .work .drops1 .drop1 {
     width: 200px;
