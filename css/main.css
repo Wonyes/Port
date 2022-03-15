@@ -984,8 +984,8 @@ svg circle:nth-child(2){
 }
 .close {
   position: absolute;
-  top: 90px;
-  right: 410px;
+  top: -50px;
+  right: 0;
   color: #fff;
   font-size: 22px;
   font-weight: bold;
@@ -993,10 +993,13 @@ svg circle:nth-child(2){
 }
 .modal .modal_body {
   position: absolute;
-
+  max-width: 1280px;
+  width: 94%;
+  left: 50%;
+  top: 50%;
   justify-content: center;
   align-items: center;
-  transform: translate(40%, 20%);
+  transform: translate(-50%, -50%);
 }
 .modal .modal-body .modal_content {
   width: 100%;
@@ -1017,14 +1020,17 @@ svg circle:nth-child(2){
   cursor: pointer;
 }
 .modal .modal_body .modal_content {
+  width: 100%;
   border-radius: 10px;
   box-shadow: -3px 0px 20px 3px rgba(255, 255, 255, 0.5);
+
 }
 .modal .modal_body .modal_txt {
   font-size: 14px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 400;
+  color: #fff;
   padding-bottom: 5px;
+
 }
 .modal .modal_body .txt1 {
   padding-top: 10px;
