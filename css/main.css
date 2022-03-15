@@ -2,14 +2,17 @@
 
 html,
 body{
-overflow-x:hidden;
+ width: 100%;
+ overflow-x:hidden;
+ margin: 0;
+ padding: 0;
 }
 
 .mobilenav {
   visibility: hidden;
   position: fixed;
   width: 100%;
-  background-color:rgba(0, 0, 0, 0.15);
+  background-color:rgba(0, 0, 0, 0.05);
   transition: 0.5s;
   display: flex;
   justify-content: center;
@@ -1297,10 +1300,13 @@ svg circle:nth-child(2){
   }
   .work .pf-imgarea {
     margin-left: 40px;
-    padding-top: 5px;
+    padding-top: 70px;
   }
   .work .pf-list {
     margin-right: 20px;
+  }
+  .work .pf-list .txt-area .wk-text2 {
+    z-index: 1;
   }
   .work .drops1 .drop1 {
     width: 200px;
