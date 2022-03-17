@@ -2,142 +2,18 @@
 
 html,
 body{
- width: 100%;
- overflow-x:hidden !important; 
-}
-
-.mobilenav {
-  visibility: hidden;
-  position: fixed;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background-color:rgba(0, 0, 0, 0.05);
-  transition: 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mobilenav.open {
-  width: 100%;
-  opacity: 1;
-}
-.mobilenav .menutoggle {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 23px;
-}
-.mobilenav .menutoggle::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background: #333;
-  transform: translateY(-8px);
-  transition: 0.5s;
-}
-.mobilenav.open .menutoggle::before {
-  transform:  translateY(0px) rotate(45deg);
-}
-.mobilenav.open .menutoggle::after {
-  transform:  translateY(0px) rotate(-45deg);
-  box-shadow: 0 0 0 #333;
-}
-.mobilenav .menutoggle::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background: #333;
-  transform: translateY(8px);
-  transition: 0.5s;
-  box-shadow: 0 -8px 0 #333;
-}
-.mobilenav ul {
-  display: flex;
-  padding-right: 80px;
-  width: 100%;
-}
-.mobilenav ul li {
-  position: relative;
-  width: 25%;
-  height: 60px;
-  padding: 0 10px;
-  transition: 0.5s;
-}
-.mobilenav ul li.active {
-  transform: translateY(15px);
-}
-.mobilenav.open ul li.active {
-  transform: translateY(10px);
-}
-.mobilenav ul li a {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-}
-.mobilenav ul li a .icon {
-  position: relative;
-  display: block;
-  min-width: 55px;
-  height: 55px;
-  transition: 0.5s;
-  line-height: 60px;
-  border-radius: 10px;
-  font-size: 1em;
-  color: #222;
-}
-.mobilenav ul li.active a .icon {
-  color: #fff;
-  background: var(--clr);
-}
-.mobilenav ul li a .icon::before {
-  content:"";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--clr);
-  filter: blur(7px);
-  opacity: 0;
-  transition: 0.5s;
-}
-.mobilenav ul li.active a .icon::before{
-  opacity: 0.5;
-}
-.mobilenav ul li a .text {
-  position: relative;
-  padding: 0 15px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  color: #333;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s;
-}
-.mobilenav.open ul li a .text {
-  opacity: 1;
-  visibility: visible;
-}
-.mobilenav ul li.active a .text {
-  color: var(--clr);
+  overflow-x:hidden !important; 
 }
 * {
   font-family: "Poppins";
   color: #fff;
   font-size: 18px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -167,7 +43,7 @@ i:nth-child(3n + 3) {
   width: 100%;
   height: 100vh;
 
-  position: relative;
+  position: absolute;
 }
 .wrap .img-box {
   position: absolute;
@@ -176,12 +52,6 @@ i:nth-child(3n + 3) {
 }
 .wrap .content .main-tit {
   text-shadow: 1px 0.5px 1px rgba(0, 0, 0, 0.3);
-}
-.wrap .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .wrap .home {
   position: relative;
@@ -359,15 +229,6 @@ i:nth-child(3n + 3) {
 .wrap .about img {
   width: 100%;
 }
-.about::before {
-  content: "";
-  width: 100%;
-  height: 100vh;
-  background: #ddd;
-
-  position: absolute;
-  opacity: 0.2;
-}
 .about .card {
   position: relative;
   width: 600px;
@@ -380,17 +241,17 @@ i:nth-child(3n + 3) {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   transition: 1s;
   display: inline-block;
-  margin: 40px;
+  margin: 20px;
   z-index: 12;
 }
 .about .card:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   background: rgba(255, 255, 255, 0.2);
 }
 .about .card .content {
-  position: relative;
-  top: 180px;
-  height: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 100%;
 }
 .about .card .content .imgBx {
   position: relative;
@@ -410,12 +271,6 @@ i:nth-child(3n + 3) {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-}
-.about .card .content .details {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: #000;
 }
 .about .card .content .info ion-icon {
   color: #000;
@@ -452,7 +307,7 @@ i:nth-child(3n + 3) {
 .about .skill-card {
   position: relative;
   width: 200px;
-  height: 250px;
+  height: 300px;
   justify-content: center;
   text-align: center;
   z-index: 10;
@@ -587,18 +442,17 @@ svg circle:nth-child(2){
   position: absolute;
   left: 300px;
   top: 610px;
-  right: 300px;
   width: 250px;
   height: 250px;
   background: transparent;
   border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
   box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
 }
-.drop1::before {
+.drop1::before {    
   content: "";
   position: absolute;
   top: 65px;
-  left: 35px;
+  left: 35px; 
   background: #fff;
   width: 30px;
   height: 30px;
@@ -1070,6 +924,134 @@ svg circle:nth-child(2){
   font-size: 22px;
   color: #000;
 }
+.mobilenav {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.mobilenav.open {
+  width: 100%;
+  opacity: 1;
+}
+.mobilenav .menutoggle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 23px;
+}
+.mobilenav .menutoggle::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  transform: translateY(-8px);
+  transition: 0.5s;
+}
+.mobilenav.open .menutoggle::before {
+  transform:  translateY(0px) rotate(45deg);
+}
+.mobilenav.open .menutoggle::after {
+  transform:  translateY(0px) rotate(-45deg);
+  box-shadow: 0 0 0 #333;
+}
+.mobilenav .menutoggle::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  transform: translateY(8px);
+  transition: 0.5s;
+  box-shadow: 0 -8px 0 #333;
+}
+.mobilenav ul {
+  display: flex;
+  padding-right: 80px;
+  width: 100%;
+}
+.mobilenav ul li {
+  position: relative;
+  width: 25%;
+  height: 60px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.mobilenav ul li.active {
+  transform: translateY(15px);
+}
+.mobilenav.open ul li.active {
+  transform: translateY(10px);
+}
+.mobilenav ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+.mobilenav ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 55px;
+  height: 55px;
+  transition: 0.5s;
+  line-height: 60px;
+  border-radius: 10px;
+  font-size: 1em;
+  color: #222;
+}
+.mobilenav ul li.active a .icon {
+  color: #fff;
+  background: var(--clr);
+}
+.mobilenav ul li a .icon::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr);
+  filter: blur(7px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.mobilenav ul li.active a .icon::before{
+  opacity: 0.5;
+}
+.mobilenav ul li a .text {
+  position: relative;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.mobilenav.open ul li a .text {
+  opacity: 1;
+  visibility: visible;
+}
+.mobilenav ul li.active a .text {
+  color: var(--clr);
+}
 /* 키프레임 */
 @ketframes animate {
   0% {
@@ -1300,9 +1282,6 @@ svg circle:nth-child(2){
     width: 300px;
     height: 350px;
   }
-  .about .card .content {
-    top: 160px;
-  }
   .about .card .content .info .main_txt {
     font-size: 14px;
     margin-left: 18px;
@@ -1329,7 +1308,7 @@ svg circle:nth-child(2){
     height: 150px;
   }
   .drop1:nth-child(4) {
-    transform: scale(0.5) translate(300px, 100px);
+    display: none;
   }
   .drop2:nth-child(2) {
     transform: scale(0.5) translate(-220px, 120px);
@@ -1341,7 +1320,7 @@ svg circle:nth-child(2){
     transform: scale(0.5) translate(260px, -20px);
   }
   .contact .sub-tit {
-    right: -200px;
+    margin-right: -80px;
   }
   .contact .sub-tit li {
     font-size: 10px;
