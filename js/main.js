@@ -26,30 +26,30 @@ $(document).ready(function() {
         $('.pointer').css({left:e.pageX, top:e.pageY});
     })
 
-    window.addEventListener("wheel", function(e){
-        e.preventDefault();
-    },{passive : false});
+    // window.addEventListener("wheel", function(e){
+    //     e.preventDefault();
+    // },{passive : false});
 
-    var $html = $("html");
-    var page = 1;
-    var lastPage = $(".container").length;
+    // var $html = $("html");
+    // var page = 1;
+    // var lastPage = $(".container").length;
     
-    $html.animate({scrollTop:0},10);
+    // $html.animate({scrollTop:0},10);
 
-    $(window).on("wheel", function(e){
-        if($html.is(":animated")) return;
+    // $(window).on("wheel", function(e){
+    //     if($html.is(":animated")) return;
      
-        if(e.originalEvent.deltaY > 0){
-            if(page== lastPage) return;
-            page++;
-        }else if(e.originalEvent.deltaY < 0){
-            if(page == 1) return;
-            page--;
-        }
-        var posTop = (page-1) * $(window).height();
+    //     if(e.originalEvent.deltaY > 0){
+    //         if(page== lastPage) return;
+    //         page++;
+    //     }else if(e.originalEvent.deltaY < 0){
+    //         if(page == 1) return;
+    //         page--;
+    //     }
+    //     var posTop = (page-1) * $(window).height();
      
-        $html.animate({scrollTop : posTop});
-    });
+    //     $html.animate({scrollTop : posTop});
+    // });
     $(document).on("click","img",function(){
         var path = $(this).attr('src')
         showImage(path);

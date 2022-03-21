@@ -2,8 +2,6 @@
 
 html,
 body{
-  margin: 0;
-  padding: 0;
   width: 100%;
   overflow-x:hidden !important; 
 }
@@ -12,8 +10,6 @@ body{
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
 }
 a {
   text-decoration: none;
@@ -40,10 +36,18 @@ i:nth-child(3n + 3) {
 }
 /* wrap 시작 */
 .wrap .content {
+  position: absolute;
+  
+  margin-left: 45px;
+  max-width: 1920px;
   width: 100%;
+  background: #e4e4e4;
   height: 100vh;
 
-  position: absolute;
+}
+.wrap .container {
+  width: 100%;
+  height: 100vh;
 }
 .wrap .img-box {
   position: absolute;
@@ -58,7 +62,6 @@ i:nth-child(3n + 3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: #e4e4e4;
 }
 .wrap .home .drop {
@@ -190,23 +193,15 @@ i:nth-child(3n + 3) {
 }
 /*  about 부분 */
 .wrap .about {
-  position: relative;
-}
-.wrap .container {
-  width: 100%;
-  height: 100vh;
-}
-.wrap .about .text-area .main-tit h1 {
-  font-size: 80px;
-}
-.wrap .about {
   background-color: #e4e4e4;
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 150vh;
   justify-content: center;
   align-items: center;
+}
+.wrap .about .text-area .main-tit h1 {
+  font-size: 80px;
 }
 .about i {
   position: absolute;
@@ -221,6 +216,7 @@ i:nth-child(3n + 3) {
 }
 .wrap .about .cardwrap {
   width: 100%;
+  height: 50vh;
 
   justify-content: center;
   display: flex;
@@ -256,8 +252,8 @@ i:nth-child(3n + 3) {
 .about .card .content .imgBx {
   position: relative;
   overflow: hidden;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -271,6 +267,9 @@ i:nth-child(3n + 3) {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+.about .card .content .info {
+  margin: 10px;
 }
 .about .card .content .info ion-icon {
   color: #000;
@@ -286,8 +285,7 @@ i:nth-child(3n + 3) {
   font-weight: 600;
   color: #000;
   font-size: 14px;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 .about .card .content .info span {
   font-size: 18px;
@@ -296,10 +294,67 @@ i:nth-child(3n + 3) {
 .about .card .content .info .main_txt{
   font-size: 18px;
   font-weight: 600;
-  margin-left: 13px;
+}
+.about .intro {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+}
+.about .drop {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 270px;
+}
+.about .drop::before {
+  content: "";
+  position: absolute;
+  top: 105px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.75;
+}
+.about .drop::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.75;
+}
+.about .drop .intro-main {
+  margin: 20px 0px 0px 0;
+  color: #191919;
+  font-weight: 600;
+  z-index: 1;
+}
+.about .drop .intro-sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  border-radius: 50%;
+
 }
 .about .skill-container {
   width: 100%;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1284,7 +1339,6 @@ svg circle:nth-child(2){
   }
   .about .card .content .info .main_txt {
     font-size: 14px;
-    margin-left: 18px;
   }
   .about .card .content .info li {
     font-weight: 500;
@@ -1325,5 +1379,38 @@ svg circle:nth-child(2){
   .contact .sub-tit li {
     font-size: 10px;
   }
+  .about .drop {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+  
+    margin-right: 100px;
+  }
+  .about .drop::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.75;
+  }
+  .about .drop::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.75;
+  }
+}
+@media screen and (max-width:468px) {
   
 }
