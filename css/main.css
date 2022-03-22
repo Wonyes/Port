@@ -180,10 +180,11 @@ i:nth-child(3n + 3) {
 }
 /*  about 부분 */
 .wrap .about {
-  background-color: #e4e4e4;
   position: relative;
+
+  background-color: #e4e4e4;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -203,7 +204,6 @@ i:nth-child(3n + 3) {
 }
 .wrap .about .cardwrap {
   width: 100%;
-  height: 50vh;
 
   justify-content: center;
   display: flex;
@@ -282,87 +282,27 @@ i:nth-child(3n + 3) {
   font-size: 18px;
   font-weight: 600;
 }
-.about .intro {
-  display: flex;
-  width: 100%;
-  height: 50vh;
-  justify-content: center;
-}
-.about .drop {
-  position: relative;
-  height: 350px;
-  width: 350px;
-  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 270px;
-}
-.about .drop::before {
-  content: "";
-  position: absolute;
-  top: 105px;
-  left: 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.75;
-}
-.about .drop::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 90px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.75;
-}
-.about .drop .intro-main {
-  margin: 20px 0px 0px 0;
-  color: #191919;
-  font-weight: 600;
-  z-index: 1;
-}
-.about .drop .intro-main::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  color: #fff;
-  border-radius: 50%;
-  z-index: 999;
-}
-.about .drop .intro-sub::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  color: #fff;
-  border-radius: 50%;
-
-}
 .about .skill-container {
-  width: 100%;
-  height: 50vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+}
+.about .skill-container::before {
+  content: "";
+  position: absolute;
+  top: 62%;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.55);
 }
 .about .skill-card {
   position: relative;
-  width: 200px;
+  width: 250px;
   height: 300px;
-  justify-content: center;
   text-align: center;
   z-index: 10;
-  margin: 20px 30px 60px;
+  margin: 20px 20px 60px;
 }
 .about .skill-card .box {
   position: absolute;
@@ -375,7 +315,7 @@ i:nth-child(3n + 3) {
   align-items: center;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10;
   border-radius: 10px;
@@ -417,13 +357,16 @@ i:nth-child(3n + 3) {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
+  text-transform: uppercase;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   z-index: 1;
   pointer-events: none;
   transition: bottom  0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+  transition-delay: 0.5s,0.5s,0s,0.5s;
   color: #fff;
 }
 .about .skill-card:hover .skill-text {
+  transition-delay: 0s,0.5s,0.5s,0s;
   bottom: -70px;
   z-index: 11;
   transform: translateX(-50%) translateY(-50px);
@@ -431,19 +374,12 @@ i:nth-child(3n + 3) {
 }
 .about .skill-card:nth-child(1) .skill-text {
   background-image :linear-gradient(326deg, #861657 0%, #ffa69e 74%);
-  
 }
 .about .skill-card:nth-child(2) .skill-text {
   background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-  
 }
 .about .skill-card:nth-child(3) .skill-text {
-  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
-  
-}
-.about .skill-card:nth-child(4) .skill-text {
-  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
-  
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%); 
 }
 svg {
   position: relative;
@@ -471,11 +407,8 @@ svg circle:nth-child(2){
   stroke-dashoffset: calc(440px - (440px * 75) / 100);
 }
 .skill-card:nth-child(3) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440px - (440px * 55) / 100);
+  stroke-dashoffset: calc(440px - (440px * 65) / 100);
 }
-.skill-card:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440px - (440px * 60) / 100);
-} 
 /* 텍스트버블효과  js연동 */
 .individual-bubble {
   position: absolute;
@@ -1228,7 +1161,6 @@ svg circle:nth-child(2){
   max-height: 100%;
   height: 100%;
   border-radius: 50px;
-  background: #454545;
 }
 ::-webkit-scrollbar-thumb {
   background: #000;
@@ -1277,7 +1209,7 @@ svg circle:nth-child(2){
 }
 @media screen and (max-width:1024px) {
   .wrap .contact {
-    padding: 50px;
+    padding: 30px;
   }
   .contact .ct-box {
     padding-top: 10px;
@@ -1302,9 +1234,6 @@ svg circle:nth-child(2){
   .about .card .content .imgBx {
     display: none;
   }
-  .about .skill-container {
-    margin-right: 100px;
-  }
   .mobilenav {
     visibility: visible;
     top: 0;
@@ -1315,9 +1244,6 @@ svg circle:nth-child(2){
   }
   .wrap .home .text-area .maininfo_sub {
     font-size: 3vw;
-  }
-  .about .skill-card {
-    margin: 20px 10px 60px;
   }
   .scroll-bar {
     display: none;
@@ -1337,6 +1263,9 @@ svg circle:nth-child(2){
   .wrap .home .text-area .maininfo_sub {
     font-size: 4vw;
   }
+  .wrap .about {
+    height: 100%;
+  }
   .wrap .about .cardwrap {
     padding-top: 60px;
   }
@@ -1351,6 +1280,16 @@ svg circle:nth-child(2){
   .about .card .content .info li {
     font-weight: 500;
   }
+  .about .skill-container {
+    width: 500px;
+  }
+  .about .skill-container::before {
+    top: 37%;
+  }
+  .wrap .work {
+    height: 100%;
+    padding-top: 160px;
+  }
   .work .pf-imgarea {
     margin-left: 40px;
     padding-top: 70px;
@@ -1361,11 +1300,11 @@ svg circle:nth-child(2){
   .work .drops1 .drop1 {
     width: 200px;
     height: 200px;
-    top: 500px;
-    left: 180px;
+    top: 600px;
+    left: 290px;
   }
   .work .drops2 .drop2 {
-    top: 50px;
+    top: 100px;
     width: 150px;
     height: 150px;
   }
@@ -1420,5 +1359,5 @@ svg circle:nth-child(2){
   }
 }
 @media screen and (max-width:468px) {
-  
+
 }
