@@ -1282,7 +1282,7 @@ svg circle:nth-child(2){
     font-weight: 500;
   }
   .about .skill-container {
-    width: 468px;
+    width: 100%;
   }
   .about .skill-container::before {
     top: 37%;
