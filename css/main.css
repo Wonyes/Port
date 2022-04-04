@@ -875,7 +875,8 @@ svg circle:nth-child(2){
 /* SCROLL */
 .scroll {
   position: fixed;
-  top: 39%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   right: 0.5%;
   z-index: 999;
 }
@@ -890,15 +891,15 @@ svg circle:nth-child(2){
   position: fixed;
   border: 1px solid #bbb;
   height: 100%;
-  right: 7.4%;
+  left: 0;
   z-index: 999;
 }
 .scroll .sc-gnb::before {
-  padding-top: 400px;
-  top: -1000px;
+  padding-bottom: 130px;
+  top: -400px;
 }
 .scroll .sc-gnb::after {
-  padding-bottom: 300px;
+  padding-top: 150px;
 }
 .scroll .sc-gnb a {
   font-family: "Times New Roman", Times, serif;
