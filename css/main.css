@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
-body,
-html
+html, body
 {
   width: 100%;
   overflow-x:hidden !important; 
-  overflow-y: auto;
+
 }
 * {
   font-family: "Poppins";
@@ -41,6 +40,7 @@ i:nth-child(3n + 3) {
 .wrap .container {
   width: 100%;
   height: 100vh;
+  background: #e4e4e4;
 }
 .wrap .content .main-tit {
   text-shadow: 1px 0.5px 1px rgba(0, 0, 0, 0.3);
@@ -50,7 +50,6 @@ i:nth-child(3n + 3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e4e4e4;
 }
 .wrap .home .drop {
   position: relative;
@@ -182,10 +181,8 @@ i:nth-child(3n + 3) {
 /*  about 부분 */
 .wrap .about {
   position: relative;
-
-  background-color: #e4e4e4;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -283,21 +280,25 @@ i:nth-child(3n + 3) {
   font-size: 18px;
   font-weight: 600;
 }
-.about .skill-container {
+.wrap .skill-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 100px;
 }
-.about .skill-container::before {
+.skill-container::before {
   content: "";
   position: absolute;
-  top: 62%;
+  top: 42%;
   left: 0;
   width: 100%;
   height: 30px;
   background: rgba(255, 255, 255, 0.55);
 }
-.about .skill-card {
+.skill-card {
   position: relative;
   width: 250px;
   height: 300px;
@@ -305,7 +306,7 @@ i:nth-child(3n + 3) {
   z-index: 10;
   margin: 20px 20px 60px;
 }
-.about .skill-card .box {
+.skill-card .box {
   position: absolute;
   top: 0;
   left: 0;
@@ -321,14 +322,14 @@ i:nth-child(3n + 3) {
   z-index: 10;
   border-radius: 10px;
 }
-.about .percent {
+.percent {
   position: relative;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   z-index: 100;
 }
-.about .percent .number {
+.percent .number {
   position: absolute;
   top: 0;
   left: 0;
@@ -338,15 +339,15 @@ i:nth-child(3n + 3) {
   justify-content: center;
   align-items: center;
 }
-.about .percent .number h2 {
+.percent .number h2 {
   color: #fff;
   font-weight: 600;
   font-size: 50px;
 }
-.about .percent .number h2 span {
+.percent .number h2 span {
   font-size: 24px;
 }
-.about .skill-text {
+.skill-text {
   position: absolute;
   bottom: -42px;
   left: 50%;
@@ -366,20 +367,20 @@ i:nth-child(3n + 3) {
   transition-delay: 0.5s,0.5s,0s,0.5s;
   color: #fff;
 }
-.about .skill-card:hover .skill-text {
+.skill-card:hover .skill-text {
   transition-delay: 0s,0.5s,0.5s,0s;
   bottom: -70px;
   z-index: 11;
   transform: translateX(-50%) translateY(-50px);
   padding: 10px 20px 10px;
 }
-.about .skill-card:nth-child(1) .skill-text {
+.skill-card:nth-child(1) .skill-text {
   background-image :linear-gradient(326deg, #861657 0%, #ffa69e 74%);
 }
-.about .skill-card:nth-child(2) .skill-text {
+.skill-card:nth-child(2) .skill-text {
   background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
 }
-.about .skill-card:nth-child(3) .skill-text {
+.skill-card:nth-child(3) .skill-text {
   background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%); 
 }
 svg {
@@ -421,7 +422,6 @@ svg circle:nth-child(2){
 /* work시작 */
 .wrap .work {
   position: relative;
-  background: #e4e4e4;
 }
 .work .drops1 .drop1 {
   position: absolute;
@@ -523,6 +523,7 @@ svg circle:nth-child(2){
 }
 .work .pf-list .pf-box {
   position: relative;
+  z-index: 10;
   display: inline-block;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
@@ -631,7 +632,6 @@ svg circle:nth-child(2){
   position: relative;
   display: flex;
   padding: 20px;
-  background: #e4e4e4;
   justify-content: center;
   align-items: center;
 }
@@ -1277,25 +1277,24 @@ svg circle:nth-child(2){
     width: 300px;
     height: 350px;
   }
-  .about .card .content .info .main_txt {
+  .card .content .info .main_txt {
     font-size: 14px;
   }
-  .about .card .content .info li {
+  .card .content .info li {
     font-weight: 500;
   }
-  .about .skill-container {
-    width: 100%;
+  .wrap .skill-container {
+    padding-bottom: 0px;
   }
-  .about .skill-container::before {
+  .skill-container::before {
     top: 37%;
   }
   .wrap .work {
     height: 100%;
-    padding-top: 160px;
   }
   .work .pf-imgarea {
-    margin-left: 40px;
-    padding-top: 70px;
+    margin-left: 30px;
+    padding-top: 0px;
   }
   .work .pf-list {
     margin-right: 20px;
@@ -1305,6 +1304,7 @@ svg circle:nth-child(2){
     height: 200px;
     top: 570px;
     left: 290px;
+    z-index: 1;
   }
   .work .drops2 .drop2 {
     top: 100px;

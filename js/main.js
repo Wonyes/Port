@@ -21,7 +21,7 @@ $(document).ready(function() {
         }
         );
     }, 350);
-    //   커서포인트
+    //   커서포인트 원페이지스크롤 시작
     $(document).mousemove(function(e){
         $('.pointer').css({left:e.pageX, top:e.pageY});
     })
@@ -53,7 +53,7 @@ $(document).ready(function() {
     $(document).on("click","img",function(){
         var path = $(this).attr('src')
         showImage(path);
-    });//end click event
+    });//end 원페이지 스크롤 event
 
     // 	이미지 클릭시 해당 이미지 모달
 	$(".modal-click").click(function(){
