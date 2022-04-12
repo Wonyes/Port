@@ -574,10 +574,13 @@ svg circle:nth-child(2){
   font-weight: 600;
   font-size: 14px;
   color: #000;
+  z-index: 1;
+
 }
 .work .pf-list .txt-area .wk-text2 {
   font-size: 16px;
   margin-bottom: 10px;
+  z-index: 1;
   color: #000;
 }
 /* 포폴리스트 이미지 호버시 확대 */
@@ -896,11 +899,11 @@ svg circle:nth-child(2){
   z-index: 999;
 }
 .scroll .sc-gnb::before {
-  padding-bottom: 130px;
-  top: -400px;
+  padding-bottom: 200px;
+  top: -480px;
 }
 .scroll .sc-gnb::after {
-  padding-top: 150px;
+  padding-top: 230px;
 }
 .scroll .sc-gnb a {
   font-family: "Times New Roman", Times, serif;
