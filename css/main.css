@@ -632,6 +632,7 @@ svg circle:nth-child(2){
   position: relative;
   display: flex;
   padding: 20px;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -1215,7 +1216,8 @@ svg circle:nth-child(2){
     padding: 30px;
   }
   .contact .ct-box {
-    padding: 20px;
+    backdrop-filter: blur(5px);
+    padding: 35px;
   }
   .wrap .contact .drop {
     height: 150px;
@@ -1302,7 +1304,7 @@ svg circle:nth-child(2){
   .work .drops1 .drop1 {
     width: 200px;
     height: 200px;
-    top: 570px;
+    top: 780px;
     left: 290px;
     z-index: 1;
   }
