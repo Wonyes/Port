@@ -190,17 +190,18 @@ i:nth-child(3n + 3) {
 .wrap .about .text-area .main-tit h1 {
   font-size: 80px;
 }
-.about i {
+/* .about i {
   position: absolute;
   background: rgb(255, 255, 255, 0.5);
   border-radius: 100%;
+  width: 100%;
   animation: bubbles linear infinite;
 }
 .about i:nth-child(even){
   background: transparent;
   border: 1px solid #fff;
   opacity: 0.3;
-}
+} */
 .wrap .about .cardwrap {
   width: 100%;
 
@@ -293,7 +294,7 @@ i:nth-child(3n + 3) {
 .skill-container::before {
   content: "";
   position: absolute;
-  top: 42%;
+  top: 33%;
   left: 0;
   width: 100%;
   height: 30px;

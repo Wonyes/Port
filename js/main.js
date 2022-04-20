@@ -97,28 +97,28 @@ $(document).ready(function() {
     toggle.onclick = function(){
         menu.classList.toggle('active')
     }
-    function bubbles(){
-        let count = 200;
-        let section = document.querySelector('#about');
-        let i = 0;
-        while (i < count){
-          let bubble = document.createElement('i');
-          let x = Math.floor(Math.random() * window.innerWidth);
-          let y = Math.floor(Math.random() * window.innerHeight);
-          let size = Math.random() * 10;
-          bubble.style.left = x+'px';
-          bubble.style.top = y+'px';
-          bubble.style.width = 1+size+'px';
-          bubble.style.height = 1+size+'px';
+    // function bubbles(){
+    //     let count = 200;
+    //     let section = document.querySelector('#about');
+    //     let i = 0;
+    //     while (i < count){
+    //       let bubble = document.createElement('i');
+    //       let x = Math.floor(Math.random() * window.innerWidth);
+    //       let y = Math.floor(Math.random() * window.innerHeight);
+    //       let size = Math.random() * 10;
+    //       bubble.style.left = x+'px';
+    //       bubble.style.top = y+'px';
+    //       bubble.style.width = 1+size+'px';
+    //       bubble.style.height = 1+size+'px';
 
-          bubble.style.animationDuration = 5+size+'s';
-          bubble.style.animationDelay = 5+size+'s';
+    //       bubble.style.animationDuration = 5+size+'s';
+    //       bubble.style.animationDelay = 5+size+'s';
 
-          section.appendChild(bubble);
-          i++
-        } 
-    }
-    bubbles();
+    //       section.appendChild(bubble);
+    //       i++
+    //     } 
+    // }
+    // bubbles();
 
     
     const menuToggle = document.querySelector('.menutoggle');
