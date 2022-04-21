@@ -1,26 +1,27 @@
 // 텍스트 버블효과
 $(document).ready(function() {
-    var bArray = [];
-    var sArray = [4,6,8,10];
+    // var bArray = [];
+    // var sArray = [4,6,8,10];
  
-    for (var i = 0; i < $('.bubbles').width(); i++) {
-        bArray.push(i);
-    }
-    function randomValue(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
-    setInterval(function(){
-        var size = randomValue(sArray);
-        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+    // for (var i = 0; i < $('.bubbles').width(); i++) {
+    //     bArray.push(i);
+    // }
+    // function randomValue(arr) {
+    //     return arr[Math.floor(Math.random() * arr.length)];
+    // }
+    // setInterval(function(){
+    //     var size = randomValue(sArray);
+    //     $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
          
-        $('.individual-bubble').animate({
-            'bottom': '80%',
-            'opacity' : '-=0.5'
-        }, 3000, function(){
-            $(this).remove()
-        }
-        );
-    }, 350);
+    //     $('.individual-bubble').animate({
+    //         'bottom': '80%',
+    //         'opacity' : '-=0.5'
+    //     }, 3000, function(){
+    //         $(this).remove()
+    //     }
+    //     );
+    // }, 350);
+
     //   커서포인트 원페이지스크롤 시작
     $(document).mousemove(function(e){
         $('.pointer').css({left:e.pageX, top:e.pageY});
