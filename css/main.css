@@ -3,7 +3,7 @@
 html, body
 {
   width: 100%;
-  overflow-x:hidden; 
+  overflow:hidden; 
   margin: 0;
   padding: 0;
 }
@@ -292,7 +292,7 @@ i:nth-child(3n + 3) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .skill-container::before {
   content: "";
@@ -428,9 +428,11 @@ svg circle:nth-child(2){
 /* work시작 */
 .wrap .work {
   position: relative;
+  padding-top: 20px;
 }
 .work .drops1 .drop1 {
   position: absolute;
+  z-index: 1;
   left: 300px;
   top: 610px;
   width: 250px;
@@ -1238,6 +1240,15 @@ svg circle:nth-child(2){
   .work .pf-list .txt-area .wk-text2 {
     z-index: 1;
   }
+  .wrap .skill-container {
+    padding-bottom: 0px;
+  }
+  .wrap .work {
+    padding-top: 0;
+  }
+  .work .pf-imgarea {
+    padding-top: 0;
+  }
   .about .card .content {
     text-align: center;
   }
@@ -1336,9 +1347,11 @@ svg circle:nth-child(2){
   .drop2:nth-child(4) {
     transform: scale(0.5) translate(260px, -20px);
   }
-  .contact .sub-tit {
-    margin-right: -80px;
-  }
+  /* .contact .sub-tit {
+    top: 0;
+    left: 0;
+    right: 0;
+  } */
   .contact .sub-tit li {
     font-size: 10px;
   }
