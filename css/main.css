@@ -517,7 +517,6 @@ svg circle:nth-child(2){
 .work .pf-list {
   display: inline-block;
   margin-right: 50px;
-  width: 25%;
 }
 .work .pf-list .pf-box {
   position: relative;
