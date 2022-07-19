@@ -1,4 +1,3 @@
-// 텍스트 버블효과
 $(document).ready(function() {
     // var bArray = [];
     // var sArray = [4,6,8,10];
@@ -54,7 +53,8 @@ $(document).ready(function() {
     $(document).on("click","img",function(){
         var path = $(this).attr('src')
         showImage(path);
-    });//end 원페이지 스크롤 event
+    });
+    //end 원페이지 스크롤 event
 
     // 	이미지 클릭시 해당 이미지 모달
 	$(".modal-click").click(function(){

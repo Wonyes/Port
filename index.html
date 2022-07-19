@@ -5,24 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     
-    <link rel="shortcut icon" href="./image/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="웹퍼블리셔 최종원의 포트폴리오">
     <meta property="og:site_name" content="Portfolio">
@@ -35,6 +17,7 @@
     <!--스타일 -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- 라이브러리 -->
     <script src="./js/libs/jquery-3.6.0.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -190,7 +173,7 @@
                 <span></span>
                 <ul>
                   <li class="img-area modal-click">
-                    <a href="#work"><img src="./image/work-closet.jpg" alt="work-closet" /></a>
+                    <a href="#work" data-value="ft"><img src="./image/work-closet.jpg" alt="work-closet" /></a>
                   </li>
                 </ul>
               </div>
@@ -202,15 +185,15 @@
               <ul>
                 <li class="txt-area">
                   <a href="#" class="wk-text1">02</a>
-                  <a href="#" class="wk-text2">(Coming soon...)</a>
+                  <a href="#" class="wk-text2">GHIBLI STUDIO (Web)</a>
                 </li>
               </ul>
               <div class="pf-box">
                 <span></span>
                 <ul>
                   <li class="img-area modal-click">
-                    <a href="#work">
-                      <img src="./image/iuytib_(9).gif" alt="bubble" />
+                    <a href="#work" data-target="ghi">
+                      <img src="./image/지브리사이트.png" alt="bubble" />
                     </a>
                   </li>
                 </ul>
@@ -223,6 +206,27 @@
               <ul>
                 <li class="txt-area">
                   <a href="#" class="wk-text1">03</a>
+                  <a href="#" class="wk-text2">(Coming soon...)</a>
+                </li>
+              </ul>
+              <div class="pf-box">
+                <span></span>
+                <ul>
+                  <li class="img-area modal-click">
+                    <a href="#work">
+                      <img src="./image/iuytib_(15).gif" alt="moon" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="site-move">
+                <a class="site-move-btn" href="#work">사이트 이동</a>
+              </div>
+            </div>
+            <div class="pf-list">
+              <ul>
+                <li class="txt-area">
+                  <a href="#" class="wk-text1">04</a>
                   <a href="#" class="wk-text2">(Coming soon...)</a>
                 </li>
               </ul>
@@ -333,7 +337,7 @@
       </ul>
     </div>
     <div id="modal-0" class="modal">
-      <div class="modal_body">
+      <div class="modal_body ft">
         <button class="close">X</button> 
         <img class="modal_content" src="./image/필클로그인화면.jpg" alt="popup" />
         
@@ -343,13 +347,24 @@
         <p class="modal_txt">제작목표 : 쇼핑몰 시장조사와 트렌드를 익히고 기본쇼핑몰보다는 편집샵,명품계열 쇼핑몰에 목표를 맞추어 제작하였습니다.</p>
         <br />
       </div>
+      <!-- <div class="modal_body ghi">
+        <button class="close">X</button> 
+        <img class="modal_content" src="./image/지브리사이트.png" alt="popup" />
+        
+        <p class="modal_txt txt1">(Web) fill the Closet (가상의 사이트 구축)</p>
+        <p class="modal_txt">제작기간 : 2021.10 ~ 2021.12 작업 기여도 :100%</p>
+        <p class="modal_txt">작업환경 : Visual Studio Code</p>
+        <p class="modal_txt">제작목표 : 쇼핑몰 시장조사와 트렌드를 익히고 기본쇼핑몰보다는 편집샵,명품계열 쇼핑몰에 목표를 맞추어 제작하였습니다.</p>
+        <br />
+      </div> -->
     </div>
     <div class="scroll">
       <ul class="sc-gnb">
-        <li class="active"><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#work">WORK</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li class="active"><a href="#home"><img src="./image/android-icon-36x36.png" alt="HOME">
+          <span> HOME</span></a></li>
+        <li><a href="#about"><img src="./image/android-icon-36x36.png" alt="about"><span> ABOUT</span></a></li>
+        <li><a href="#work"><img src="./image/android-icon-36x36.png" alt="work"><span> WORK</span></a></li>
+        <li><a href="#contact"><img src="./image/android-icon-36x36.png" alt="contact"><span> CONTACT</span></a></li>
       </ul>
     </div>
     <div id="scroll-ani" class="scroll-bar">

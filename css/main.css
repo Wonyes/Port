@@ -3,7 +3,7 @@
 html, body
 {
   width: 100%;
-  overflow:hidden; 
+  overflow-x:hidden; 
   margin: 0;
   padding: 0;
 }
@@ -132,7 +132,7 @@ i:nth-child(3n + 3) {
 }
 .wrap .home .drop .menu ion-icon {
   color: #000;
-  width: 40px;
+  width: 30px;
 }
 .wrap .home .drop .menu li {
   position: absolute;
@@ -192,18 +192,6 @@ i:nth-child(3n + 3) {
 }
 .wrap .about .text-area .main-tit h1 {
   font-size: 80px;
-}
-.about i {
-  position: absolute;
-  background: rgb(255, 255, 255, 0.5);
-  border-radius: 100%;
-  width: 100%;
-  animation: bubbles linear infinite;
-}
-.about i:nth-child(even){
-  background: transparent;
-  border: 1px solid #fff;
-  opacity: 0.3;
 }
 .wrap .about .cardwrap {
   width: 100%;
@@ -274,8 +262,9 @@ i:nth-child(3n + 3) {
   display: flex;
   font-weight: 600;
   color: #000;
-  font-size: 14px;
+  font-size: 13px;
   margin: 10px;
+  text-align: start;
 }
 .about .card .content .info span {
   font-size: 18px;
@@ -527,7 +516,8 @@ svg circle:nth-child(2){
 }
 .work .pf-list {
   display: inline-block;
-  margin-right: 100px;
+  margin-right: 50px;
+  width: 25%;
 }
 .work .pf-list .pf-box {
   position: relative;
@@ -614,8 +604,12 @@ svg circle:nth-child(2){
 }
 .pf-box .img-area {
   overflow: hidden;
-  width: 100%;
+  width: 330px;
   height: 100%;
+}
+.pf-box .img-area a img {
+  width: 330px;
+  height: 185px;
 }
 .pf-imgarea .site-move {
   margin-top: 10px;
@@ -889,16 +883,16 @@ svg circle:nth-child(2){
 .scroll {
   position: fixed;
   top: 50%;
-  transform: translate(-50%, -50%);
-  right: 0.5%;
+  transform: translate(0%, -50%);
+  right: 0;
   z-index: 999;
 }
 .scroll .sc-gnb li {
   padding-bottom: 35px;
-  width: 130px;
-  height: 60px;
+  width: 100%;
+  height: 45px;
 }
-.scroll .sc-gnb::before,
+/* .scroll .sc-gnb::before,
 .scroll .sc-gnb::after {
   content: "";
   position: fixed;
@@ -913,14 +907,25 @@ svg circle:nth-child(2){
 }
 .scroll .sc-gnb::after {
   padding-top: 230px;
+} */
+.scroll .sc-gnb a img {
+  width: 25px;
 }
-.scroll .sc-gnb a {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-  color: #bbb;
+.scroll .sc-gnb a span {
+  opacity: 0;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1rem;
 }
-.scroll .sc-gnb .active a {
-  font-size: 22px;
+.scroll .sc-gnb a span:hover,
+.scroll .sc-gnb a img:hover {
+  opacity: 1;
+}
+.scroll .sc-gnb .active a span {
+  opacity: 1;
+}
+.scroll .sc-gnb .active a img {
+  transform: scale(1.3);
   color: #000;
 }
 .mobilenav {
@@ -1321,6 +1326,7 @@ svg circle:nth-child(2){
     padding-top: 0px;
   }
   .work .pf-list {
+    width: 100%;
     margin-right: 20px;
   }
   .work .drops1 .drop1 {
