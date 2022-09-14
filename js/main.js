@@ -55,16 +55,26 @@ $(document).ready(function() {
         showImage(path);
     });
     //end 원페이지 스크롤 event
-
-    // 	이미지 클릭시 해당 이미지 모달
-	$(".modal-click").click(function(){
-		$(".modal").show();
-		// 해당 이미지 가겨오기
-		var imgSrc = $(this).children("img").attr("src");
-		var imgAlt = $(this).children("img").attr("alt");
-		$(".modal_content img").attr("src", imgSrc);
-		$(".modal_content img").attr("alt", imgAlt);
+    $(".modal-click").click(function(e){
+        e.preventDefault();
+        dataModal = $(this).attr("data-modal");
+        $("#" + dataModal).css({"display":"block"});
+        $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
     });
+    
+    $(".close-modal, .modal-body").click(function(){
+        $(".modal").css({"display":"none"});
+        $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
+    });
+    // 	이미지 클릭시 해당 이미지 모달
+	// $(".modal-click").click(function(){
+	// 	$(".modal").show();
+	// 	// 해당 이미지 가겨오기
+	// 	var imgSrc = $(this).children("img").attr("src");
+	// 	var imgAlt = $(this).children("img").attr("alt");
+	// 	$(".modal_content img").attr("src", imgSrc);
+	// 	$(".modal_content img").attr("alt", imgAlt);
+    // });
     //.modal안에 button을 클릭하면 .modal닫기
 	$(".modal button").click(function(){
 		$(".modal").hide();
